@@ -16,11 +16,11 @@ class Players:
 
     def player_input(self):
         cardnumber=self.first.numbers
-        print("The card is: %d" %cardnumber)
+        print("Moo. The card is: %d" %cardnumber)
 
         dealer = ""
         while dealer != "h" or dealer != "l":
-            dealer = input("Higher or Lower? [h/l]: ")
+            dealer = input("Moo. Higher or Lower? [h/l]: ")
             previous_card = self.first
             new_card = Deck()
             if(dealer == "h"):
@@ -30,7 +30,7 @@ class Players:
                 self.low(previous_card,new_card)
                 break
             else:
-                print("Choose h or l only.")
+                print("Moo. Choose h or l only.")
 
     def updates(self, guess, new_card):
         self.score += guess 
@@ -39,8 +39,8 @@ class Players:
         self.first.numbers=new_card
 
     def player_output(self):
-        print(f"Your score is: {self.score}")
-        print(f"The next card was: {self.first.numbers}")
+        print(f"Moo. Your score is: {self.score}")
+        print(f"Moo. The next card was: {self.first.numbers}")
 
         if(self.score <=0):
             self.is_playing = False
@@ -48,7 +48,7 @@ class Players:
 
         abc=""
         while abc != "n" or "y":
-            abc = input("Play again? [y/n]: ")
+            abc = input("Moo. Play again? [y/n]: ")
             if(abc == "n"):
                 self.is_playing = False
                 break
@@ -56,7 +56,7 @@ class Players:
                 print(" ")
                 break
             else:
-                print("Choose y or n only.")
+                print("Moo. Choose y or n only.")
 
     def high(self, card1, card2):
         if card2.numbers > card1.numbers:
@@ -70,5 +70,5 @@ class Players:
         elif card2.numbers > card1.numbers:
             self.updates(-75,card2.numbers)
         else:
-            print(" ")
+            print("Moo.  ")
             return
